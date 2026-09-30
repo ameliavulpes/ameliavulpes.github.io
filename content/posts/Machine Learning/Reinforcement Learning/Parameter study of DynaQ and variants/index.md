@@ -12,7 +12,7 @@ mathEngine: mathjax
 summary:
 ---
 # Implementation
-Four variants of DynaQ are put against each other in the [shortcut maze]({{< ref "/posts/Reinforcement Learning/Planning and learning/index.md" >}}#fig:shortcut). The environments are changed at step 6000.
+Four variants of DynaQ are put against each other in the [shortcut maze]({{< ref "/posts/Machine Learning/Reinforcement Learning/Planning and learning/index.md" >}}#fig:shortcut). The environments are changed at step 6000.
 - DynaQ
 - DynaQ+, which plans on all states.
 - DynaQ+ Selective, which only plans on visited states

@@ -103,7 +103,7 @@ The exploration bonus is applied to all unvisited transitions, inducing the agen
 **Exercise 8.3** Careful inspection of Figure 8.5 reveals that the difference between Dyna-Q+ and Dyna-Q narrowed slightly over the first part of the experiment. What is the reason for this?
 
 <span id="ex:8.4"></span>**Exercise 8.4 (programming)** The exploration bonus described above actually changes the estimated values of states and actions. Is this necessary? Suppose the bonus $\kappa \sqrt{\tau}$ was used not in updates, but solely in action selection. That is, suppose the action selected was always that for which $Q(S_t, a) + \kappa \sqrt{\tau(S_t, a)}$ was maximal. Carry out a gridworld experiment that tests and illustrates the strengths and weaknesses of this alternate approach.  
-[Analysis]({{< ref "/posts/Reinforcement Learning/Parameter study of DynaQ and variants/index.md" >}}) on this exercise.
+[Analysis]({{< ref "/posts/Machine Learning/Reinforcement Learning/Parameter study of DynaQ and variants/index.md" >}}) on this exercise.
 
 **Exercise 8.5** How might the tabular Dyna-Q algorithm shown [above](#pseudocode-for-dynaq) be modified to handle stochastic environments? How might this modification perform poorly on changing environments such as considered in this section? How could the algorithm be modified to handle stochastic environments **and** changing environments?
 
