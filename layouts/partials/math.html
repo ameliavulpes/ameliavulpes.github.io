@@ -1,27 +1,10 @@
-<!-- NOT IN USE -->
-
-<!-- <script>
-MathJax = {
-  tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']],
-    displayMath: [['$$', '$$'], ['\\[', '\\]'], ['\\begin{equation}', '\\end{equation}]'] ],
-    tags: "all"
-  }
-};
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script> -->
-
-<link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
-
-<script defer
-  src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
-
-<script defer
-  src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
-  onload="renderMathInElement(document.body, {
-    delimiters: [
-      {left: '$$', right: '$$', display: true},
-      {left: '$', right: '$', display: false}
-    ]
-  });"></script>
+{{/* Select the renderer for a page with math: true; KaTeX is the default. */}}
+{{- $engine := .Params.mathEngine | default "katex" }} {{- if eq $engine "katex"
+}} {{- partial "katex.html" . }} {{- else if eq $engine "mathjax" }} {{/* Use
+MathJax's default TeX delimiters when MathJax is selected. */}}
+<script
+    defer
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+></script>
+{{- else }} {{- errorf "Invalid mathEngine: %s. Use 'katex' or 'mathjax'."
+$engine }} {{- end }}

@@ -1,39 +1,18 @@
 <article class="{{ .class }}">
+    <header class="entry-header">
+        <h2 class="entry-hint-parent">{{ .page.Title }}</h2>
+    </header>
 
-<header class="entry-header">
-<h2 class="entry-hint-parent">{{ .page.Title }}</h2>
-</header>
+    {{ if ne (.page.Param "hideSummary") true }}
+    <div class="entry-content">
+        <p>
+            {{ .page.Summary | plainify | htmlUnescape }}{{ if .page.Truncated
+            }}...{{ end }}
+        </p>
+    </div>
+    {{ end }}
 
-{{/*  {{ if ne (.page.Param "hideSummary") true }}
-<div class="entry-content">
-<p>
-{{ if .IsHome }}
-  {{ .page.Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}
-{{ else }}
-{{ (.page.Summary | plainify | htmlUnescape | replaceRE "(?m)^# .*" "" | trim "") }}{{ if .Truncated }}...{{ end }}
-{{ end }}
-</p>
-</div>
-{{ end }}  */}}
+    <footer class="entry-footer">{{ partial "post_meta.html" .page }}</footer>
 
-{{/*  {{ if ne (.page.Param "hideSummary") true }}
-<div class="entry-content">
-<p>
-{{ .page.Summary | plainify | htmlUnescape }}
-</p>
-</div>
-{{ end }}  */}}
-
-{{ if ne (.page.Param "hideSummary") true }}
-<div class="entry-content">
-<p>{{ .page.Summary | plainify | htmlUnescape }}{{ if .page.Truncated }}...{{ end }}</p>
-</div>
-{{ end }}
-
-<footer class="entry-footer">
-{{ partial "post_meta.html" .page }}
-</footer>
-
-<a class="entry-link" href="{{ .page.Permalink }}"></a>
-
+    <a class="entry-link" href="{{ .page.Permalink }}"></a>
 </article>

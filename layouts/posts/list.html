@@ -33,9 +33,12 @@
 
 {{ $sections := .Sections }}
 {{ $posts := .RegularPages }}
+{{ $isPostsRoot := .Parent.IsHome }}
 
-{{ if .IsHome }}
+{{/* The posts landing page lists posts from every topic section. */}}
+{{ if $isPostsRoot }}
 {{ $posts = where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{ $posts = sort $posts "Lastmod" "desc" }}
 {{ end }}
 
 {{ $paginator := .Paginate $posts }}
@@ -54,7 +57,6 @@
 <article class="post-entry">
   <header class="entry-header">
   <h2 class="entry-hint-parent">{{ .Title }}</h2>
-  </header>
   </header>
 
   {{ if .Description }}
@@ -79,7 +81,7 @@
 
 {{ if gt (len $posts) 0 }}
 
-<h2 class="section-header">Posts</h2>
+<h2 class="section-header">{{ if $isPostsRoot }}Recent posts{{ else }}Posts{{ end }}</h2>
 
 {{ range $index, $page := $paginator.Pages }}
 

@@ -29,7 +29,6 @@
 	</tbody>
 </table>
 
-
 <p align="center">
   <img src="https://user-images.githubusercontent.com/21258296/114303440-bfc0ae80-9aeb-11eb-8cfa-48a4bb385a6d.png" alt="Mockup image" title="Mockup"/>
 </p>
@@ -91,3 +90,35 @@ PaperMod consistently scores near-perfect results on [Pagespeed Insights](https:
 - [Feather Icons](https://github.com/feathericons/feather)
 - [Simple Icons](https://github.com/simple-icons/simple-icons)
 - All contributors and supporters
+
+---
+
+# Writing for Amelia's blog
+
+This site is built with Hugo and PaperMod. Blog posts live under `content/posts/`.
+
+## Add a post
+
+1. Create a Markdown file under `content/posts/`. Use a descriptive folder and file name, such as `content/posts/Machine Learning/New topic/index.md`. A page bundle (`index.md` in its own folder) is convenient when a post has images or other attachments.
+2. Add front matter at the top of the file:
+
+   ```yaml
+   ---
+   title: "A clear post title"
+   date: 2026-10-04
+   lastmod: 2026-10-04
+   draft: true
+   description: "A short description for previews and search."
+   summary: "A short summary shown in the post list."
+   tags: ["Example", "Notes"]
+   categories: ["Machine Learning"]
+   math: false
+   ---
+   ```
+
+   Replace the examples with your post's details. Keep dates as `YYYY-MM-DD`. Set `draft: true` while writing, then change it to `false` or remove it to publish.
+
+3. Write the article below the closing `---` in Markdown. Put page-specific images alongside `index.md` and refer to them with relative paths, e.g. `![Diagram](diagram.png)`.
+4. Preview with `hugo server -D` (`-D` includes drafts), then commit and publish using the repository's normal GitHub workflow.
+
+Optional front matter: `math: true` enables math rendering (`mathEngine: mathjax` selects MathJax; KaTeX is the default); `smiles: true` loads chemistry rendering for `[data-smiles]` elements; `AI_warning: true` displays the AI content notice; and `hideSummary: true` hides the post-list summary. For site implementation and configuration changes, see [`SITE_MAINTENANCE.md`](SITE_MAINTENANCE.md).
