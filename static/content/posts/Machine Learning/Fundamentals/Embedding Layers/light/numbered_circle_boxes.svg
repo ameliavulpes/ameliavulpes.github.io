@@ -1,0 +1,35 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="100%" height="100%">
+  <g transform="translate(240.00, 60.00) rotate(0.00)">
+    <rect x="-30.0" y="-30.0" width="60" height="60" fill="none" stroke="#000000" stroke-width="3" />
+    <text x="0" y="0" fill="#000000" font-size="28" font-weight="bold" font-family="sans-serif" dominant-baseline="central" text-anchor="middle">0</text>
+  </g>
+  <g transform="translate(367.28, 112.72) rotate(45.00)">
+    <rect x="-30.0" y="-30.0" width="60" height="60" fill="none" stroke="#000000" stroke-width="3" />
+    <text x="0" y="0" fill="#000000" font-size="28" font-weight="bold" font-family="sans-serif" dominant-baseline="central" text-anchor="middle">1</text>
+  </g>
+  <g transform="translate(420.00, 240.00) rotate(90.00)">
+    <rect x="-30.0" y="-30.0" width="60" height="60" fill="none" stroke="#000000" stroke-width="3" />
+    <text x="0" y="0" fill="#000000" font-size="28" font-weight="bold" font-family="sans-serif" dominant-baseline="central" text-anchor="middle">2</text>
+  </g>
+  <g transform="translate(367.28, 367.28) rotate(135.00)">
+    <rect x="-30.0" y="-30.0" width="60" height="60" fill="none" stroke="#000000" stroke-width="3" />
+    <text x="0" y="0" fill="#000000" font-size="28" font-weight="bold" font-family="sans-serif" dominant-baseline="central" text-anchor="middle">3</text>
+  </g>
+  <g transform="translate(240.00, 420.00) rotate(180.00)">
+    <rect x="-30.0" y="-30.0" width="60" height="60" fill="none" stroke="#000000" stroke-width="3" />
+    <text x="0" y="0" fill="#000000" font-size="28" font-weight="bold" font-family="sans-serif" dominant-baseline="central" text-anchor="middle">4</text>
+  </g>
+  <g transform="translate(112.72, 367.28) rotate(225.00)">
+    <rect x="-30.0" y="-30.0" width="60" height="60" fill="none" stroke="#000000" stroke-width="3" />
+    <text x="0" y="0" fill="#000000" font-size="28" font-weight="bold" font-family="sans-serif" dominant-baseline="central" text-anchor="middle">5</text>
+  </g>
+  <g transform="translate(60.00, 240.00) rotate(270.00)">
+    <rect x="-30.0" y="-30.0" width="60" height="60" fill="none" stroke="#000000" stroke-width="3" />
+    <text x="0" y="0" fill="#000000" font-size="28" font-weight="bold" font-family="sans-serif" dominant-baseline="central" text-anchor="middle">6</text>
+  </g>
+  <g transform="translate(112.72, 112.72) rotate(315.00)">
+    <rect x="-30.0" y="-30.0" width="60" height="60" fill="none" stroke="#000000" stroke-width="3" />
+    <text x="0" y="0" fill="#000000" font-size="28" font-weight="bold" font-family="sans-serif" dominant-baseline="central" text-anchor="middle">7</text>
+  </g>
+</svg>

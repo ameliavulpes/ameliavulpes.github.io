@@ -1,29 +1,22 @@
-
-{{ if .Params.smiles }}
-  {{ partial "chem.html" . }}
-{{ end }}
-
-
-{{ if .Params.math }}
-  {{ $engine := .Params.mathEngine | default "katex" }}
-
-  {{ if eq $engine "katex" }}
-    {{ partial "katex.html" . }}
-
-  {{ else if eq $engine "mathjax" }}  
-    <script>
-      window.MathJax = {
+{{ if .Params.smiles }} {{ partial "chem.html" . }} {{ end }} {{ if .Params.math
+}} {{ $engine := .Params.mathEngine | default "katex" }} {{ if eq $engine
+"katex" }} {{ partial "katex.html" . }} {{ else if eq $engine "mathjax" }}
+<script>
+    window.MathJax = {
         tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']],
-          displayMath: [['$$', '$$']],
-          tags: 'ams'   // 👈 THIS enables numbering
-        }
-      };
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+            inlineMath: [
+                ["$", "$"],
+                ["\\(", "\\)"],
+            ],
+            displayMath: [["$$", "$$"]],
+            tags: "ams", // 👈 THIS enables numbering
+        },
+    };
+</script>
+<script
+    defer
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+></script>
 
-  {{ else }}
-    {{ errorf "Invalid mathEngine: %s. Use 'katex' or 'mathjax'." $engine }}
-  {{ end }}
-
-{{ end }}
+{{ else }} {{ errorf "Invalid mathEngine: %s. Use 'katex' or 'mathjax'." $engine
+}} {{ end }} {{ end }}
